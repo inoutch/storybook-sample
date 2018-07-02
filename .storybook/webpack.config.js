@@ -16,7 +16,8 @@ module.exports = (baseConfig, env) => {
                     loader: 'babel-loader',
                 },
                 {
-                    test: /\.stories\.tsx?$/,
+                    test: /\.(tsx?)|(js)$/,
+                    exclude: /node_modules/,
                     loaders: [
                         {
                             loader: require.resolve('@storybook/addon-storysource/loader'),

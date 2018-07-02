@@ -9,7 +9,7 @@ interface InputTextState {
     value: string;
 }
 
-storiesOf("入力フォーム", module)
+storiesOf("コンポーネント|入力フォーム.InputText", module)
     .addDecorator(withKnobs)
     .add("デフォルト", withState<InputTextState>(
         (state, setState) =>
