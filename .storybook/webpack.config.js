@@ -15,6 +15,16 @@ module.exports = (baseConfig, env) => {
                     exclude: /node_modules/,
                     loader: 'babel-loader',
                 },
+                {
+                    test: /\.stories\.tsx?$/,
+                    loaders: [
+                        {
+                            loader: require.resolve('@storybook/addon-storysource/loader'),
+                            options: { parser: 'typescript' }
+                        }
+                    ],
+                    enforce: 'pre',
+                },
             ],
         },
     }
